@@ -10,6 +10,9 @@ app.use(cors())
 app.listen(PORT,() => {
     console.log(`Server running at port ${PORT}`)
 })
+app.get('/weatherupdate',async (req,res) => {
+    res.send({message : "use the post request on this same route to test"})
+})
 app.post('/weatherupdate',async (req,res) => {
     console.log(req.body);
     let data = { weather : {}};
