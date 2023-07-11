@@ -1,0 +1,6 @@
+POST http://localhost:4000/weatherupdate
+Content-Type: application/json
+
+{
+    "cities":["jaipur","london","toronto"]
+}
