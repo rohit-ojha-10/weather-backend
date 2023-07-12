@@ -1,1 +1,6 @@
-GET http://localhost:4000/weatherupdate
+POST  http://localhost:4000/weatherupdate
+Content-Type: application/json
+
+{
+    "cities" : ["delhi","jaipur"]
+}

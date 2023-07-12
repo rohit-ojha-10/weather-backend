@@ -21,8 +21,8 @@ app.post('/weatherupdate',async (req,res) => {
         {
             await axios.get(url+`?key=${process.env.API_KEY}&q=${req.body.cities[i]}&aqi=no`)
             .then((resp) => {
-                // console.log(resp);
-                data.weather[`${req.body.cities[i]}`] = resp.data.current.condition.text;
+                console.log(resp.data.current);
+                data.weather[`${req.body.cities[i]}`] = `${resp.data.current.temp_c}C`;
                 console.log(data)
             })
             .catch((err) => {
